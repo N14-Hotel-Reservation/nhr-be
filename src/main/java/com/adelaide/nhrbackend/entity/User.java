@@ -14,9 +14,15 @@ public class User extends BaseEntity{
     @Column(unique = true)
     private String username;
 
+    private String role_id;
+
     private String password;
 
     private String nickname;
+
+    private Boolean ifLocked;
+
+    private Boolean ifEnable;
 
     @Enumerated(EnumType.STRING)
     private Gender gender;
