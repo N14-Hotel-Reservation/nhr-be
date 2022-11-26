@@ -12,8 +12,8 @@ import java.util.Date;
 public abstract class BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String Id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
 
     @CreationTimestamp
     private Date createTime;

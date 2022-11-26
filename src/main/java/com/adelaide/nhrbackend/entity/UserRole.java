@@ -11,7 +11,7 @@ import java.util.Date;
 @Data
 public class UserRole {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String user_id;
 
     @Column(unique = true)

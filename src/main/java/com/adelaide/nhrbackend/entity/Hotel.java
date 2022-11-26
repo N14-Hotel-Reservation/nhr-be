@@ -8,7 +8,8 @@ import java.sql.Blob;
 @Entity
 @Data
 public class Hotel extends BaseEntity{
-    private String city_id;
+    private String cityId;
+
     private String name;
     private String address;
     private Double mark;
