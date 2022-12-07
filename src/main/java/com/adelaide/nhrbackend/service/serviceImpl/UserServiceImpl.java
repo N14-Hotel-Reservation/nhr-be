@@ -2,6 +2,7 @@ package com.adelaide.nhrbackend.service.serviceImpl;
 
 import com.adelaide.nhrbackend.dto.UserCreateRequest;
 import com.adelaide.nhrbackend.entity.User;
+import com.adelaide.nhrbackend.enums.Gender;
 import com.adelaide.nhrbackend.repository.UserRepository;
 import com.adelaide.nhrbackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +51,15 @@ public class UserServiceImpl implements UserService {
         //TODO
 
         return userRepository.save(user);
+    }
+
+    @Override
+    public User getByGender(Gender gender) {
+        Optional<User> user = userRepository.findByGender(gender);
+        if (!user.isPresent()){
+            //todo 增加错误类型
+        }
+        return user.get();
     }
 
     private void checkUserName(String username) {
